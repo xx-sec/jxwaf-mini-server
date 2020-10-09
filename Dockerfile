@@ -16,7 +16,9 @@ WORKDIR /usr/src/app
 VOLUME /usr/src/app
 ADD ./requirements.txt /requirements.txt
 
-RUN pip3 install --upgrade pip --index-url https://pypi.tuna.tsinghua.edu.cn/simple
-RUN pip3 install -r /requirements.txt
+#RUN yum -y install python3 python3-pip python3-devel
+#RUN pip3 install --upgrade pip --index-url https://pypi.tuna.tsinghua.edu.cn/simple
+#RUN pip3 install -r /requirements.txt --index-url https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip install -r /requirements.txt --index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 USER root
