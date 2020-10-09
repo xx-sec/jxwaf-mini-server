@@ -10,7 +10,7 @@ RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Cen
 RUN curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
 RUN yum makecache
 
-RUN yum install -y epel-release gcc make python-devel python-pip
+RUN yum install -y epel-release gcc make python-devel python-pip mysql-devel
 
 WORKDIR /usr/src/app
 VOLUME /usr/src/app
